@@ -25,6 +25,10 @@ export class AuthService {
             password: hashedPassword
         });
 
+        // if (!user || !user._id) {
+        //     throw new Error('User or user._id is undefined.');
+        // }
+        
         const token = this.jwtService.sign({
             id: user._id
         });
